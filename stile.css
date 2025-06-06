@@ -1,0 +1,575 @@
+/* Font e Colori ispirati alla Corea */
+:root {
+  --rosa-coreano: #ffc0cb; /* Rosa tenue */
+  --bianco-perla: #f8f8f8; /* Bianco latte */
+  --nero-elegante: #333333; /* Quasi nero */
+  --verde-te: #d1e0d7; /* Verde rilassante */
+  --ombra-diffusa: rgba(0, 0, 0, 0.05);
+}
+
+/* Stile Generale */
+body {
+  font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  background-color: var(--bianco-perla);
+  color: var(--nero-elegante);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Elegante */
+.header {
+  background-color: white;
+  box-shadow: 0 2px 10px var(--ombra-diffusa);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--rosa-coreano);
+  letter-spacing: -0.5px;
+}
+
+/* Navigazione Minimalista */
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: var(--nero-elegante);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.nav-link:hover {
+  color: var(--rosa-coreano);
+}
+
+.nav-link:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--rosa-coreano);
+  transition: width 0.3s;
+}
+
+.nav-link:hover:after {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, rgba(255,255,255,0.9), rgba(255,192,203,0.2)), 
+              url('textura-liscia.jpg');
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  color: var(--nero-elegante);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  color: var(--rosa-coreano);
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+/* Bottoni Delicati */
+.btn {
+  padding: 12px 30px;
+  border-radius: 25px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-primary {
+  background-color: var(--rosa-coreano);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #ffa7b6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 192, 203, 0.3);
+}
+
+/* Sezione Prodotti */
+.products-section {
+  padding: 4rem 2rem;
+  background-color: white;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: var(--nero-elegante);
+  position: relative;
+}
+
+.section-title:after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: var(--rosa-coreano);
+  margin: 15px auto;
+}
+
+/* Card Prodotto */
+.product-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px var(--ombra-diffusa);
+  transition: transform 0.3s;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+.product-image {
+  height: 250px;
+  background-color: var(--bianco-perla);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-info {
+  padding: 1.5rem;
+}
+
+.product-name {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-description {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.product-price {
+  font-weight: 700;
+  color: var(--rosa-coreano);
+  font-size: 1.1rem;
+}
+
+/* Footer Pulito */
+.footer {
+  background-color: var(--nero-elegante);
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.footer-logo {
+  color: var(--bianco-perla);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.social-icon {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: var(--rosa-coreano);
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+.nav-link.active {
+    color: var(--rosa-coreano);
+    font-weight: bold;
+}
+/* Sezione Servizi */
+.services-section {
+    padding: 50px 20px;
+    background-color: var(--bianco-perla);
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-category {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.service-category h3 {
+    color: var(--rosa-coreano);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.service-list {
+    list-style: none;
+    padding: 0;
+}
+
+.service-list li {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 12px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.service-name {
+    font-weight: 500;
+}
+
+.service-price {
+    color: var(--rosa-coreano);
+    font-weight: bold;
+}
+
+.service-note {
+    flex-basis: 100%;
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Bottoni prenotazione */
+.booking-cta {
+    text-align: center;
+    margin-top: 50px;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+}
+
+.btn-call {
+    background: var(--rosa-coreano);
+    color: white;
+}
+
+.btn-whatsapp {
+    background: #25D366;
+    color: white;
+    margin-left: 15px;
+}
+
+@media (max-width: 600px) {
+    .btn-call, .btn-whatsapp {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Sezione Contatti */
+.contact-section {
+    padding: 60px 20px;
+    background: var(--bianco-perla);
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.contact-card.highlight {
+    border-left: 4px solid var(--rosa-coreano);
+}
+
+.contact-card i {
+    font-size: 1.5rem;
+    color: var(--rosa-coreano);
+    margin-top: 3px;
+}
+
+.contact-card a {
+    color: var(--nero-elegante);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-card a:hover {
+    color: var(--rosa-coreano);
+}
+
+.social-buttons {
+    margin-top: 10px;
+}
+
+.whatsapp-btn {
+    background: #25D366;
+    color: white !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 0.9rem;
+}
+
+/* Form */
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    height: 120px;
+}
+
+/* Routine Coreana */
+.korean-routine {
+    background: linear-gradient(to bottom, #fff8f9, #ffffff);
+    padding: 60px 20px;
+}
+
+.routine-step {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 60px 0;
+    align-items: center;
+}
+
+.step-visual {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(255, 192, 203, 0.2);
+}
+
+.step-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--rosa-coreano);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.korean-name {
+    font-size: 0.9rem;
+    color: #888;
+    font-style: italic;
+}
+
+.step-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.benefits ul {
+    list-style-type: '❤️ ';
+    padding-left: 20px;
+}
+
+.pro-tip {
+    border-left: 3px solid var(--rosa-coreano);
+    padding-left: 15px;
+    font-size: 0.9rem;
+}
+
+.ingredient-chips {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.ingredient-chips span {
+    background: #f0f0f0;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+/* Slider Before/After */
+.comparison-slider {
+    position: relative;
+    height: 300px;
+}
+
+.comparison-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.slider-handle {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    background: rgba(255,255,255,0.7);
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: ew-resize;
+}
+
+/* Infografica */
+.routine-infographic {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 80px auto;
+    max-width: 800px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+}
+
+.infographic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.am-routine, .pm-routine {
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.am-routine {
+    background: #f8f9ff;
+    border: 1px dashed #c3d0ff;
+}
+
+.pm-routine {
+    background: #fff8f9;
+    border: 1px dashed #ffd6e0;
+}
+
+.time-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: white;
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* CTA */
+.routine-cta {
+    background: var(--rosa-coreano);
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.routine-cta h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.routine-cta .btn-pink {
+    background: white;
+    color: var(--rosa-coreano);
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.cta-image {
+    position: absolute;
+    height: 120%;
+    right: -50px;
+    bottom: -20px;
+    opacity: 0.2;
+}
+
+@media (max-width: 768px) {
+    .routine-step {
+        grid-template-columns: 1fr;
+    }
+    
+    .step-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .infographic-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
